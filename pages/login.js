@@ -8,6 +8,10 @@ class LoginPage {
     this.loginBtn = '#login-button';
   }
 
+  async goto() {
+    await this.page.goto('https://www.saucedemo.com/');
+  }
+
   async login(user, pass) {
 
     await this.page.fill(this.username, user);
